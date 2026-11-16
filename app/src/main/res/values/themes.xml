@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- The window background matches the game's night sky so there is no white flash on start-up. -->
+    <style name="Theme.Version5" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/night</item>
+    </style>
+</resources>

@@ -1,0 +1,55 @@
+# ============================================================
+# Android Project .gitignore (Android Studio + VS Code)
+# ============================================================
+
+# ---------- Operating System Files ----------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ---------- Gradle & Kotlin ----------
+.gradle/
+build/
+.kotlin/
+local.properties
+
+# ---------- Android Studio / IntelliJ ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ---------- Android Build Outputs ----------
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+output-metadata.json
+
+# ---------- Logs & Profiling ----------
+*.log
+*.hprof
+
+# ---------- Signing & Secrets ----------
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+
+# ---------- Google Services (decide by policy) ----------
+# google-services.json
+
+# ---------- VS Code ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
