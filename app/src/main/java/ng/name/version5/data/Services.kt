@@ -8,7 +8,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
-import ng.name.version5.R
+import ng.name.nsikak.kidquest.R
 import ng.name.version5.core.Difficulty
 import ng.name.version5.core.PlayMode
 import ng.name.version5.core.Rank

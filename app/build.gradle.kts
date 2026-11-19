@@ -3,35 +3,22 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-base {
-    archivesName = "KidiesQuest"
-}
-
 android {
-    namespace = "ng.name.version5"
+    namespace = "ng.name.nsikak.kidquest"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "ng.name.version5"
+        applicationId = "ng.name.nsikak.kidquest"
         minSdk = 21
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-
     buildTypes {
         release {
-		isMinifyEnabled = true          // R8 code shrinking + obfuscation
-            isShrinkResources = true        // remove unused resources
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-            // TEMPORARY: sign with the debug certificate so the release APK installs.
-            // Replace with a real keystore before publishing anywhere.
-            signingConfig = signingConfigs.getByName("debug")
             optimization {
                 enable = false
             }
@@ -63,16 +50,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
-}
-
-tasks.register<Copy>("copyReleaseApk") {
-    from(layout.buildDirectory.dir("outputs/apk/release"))
-    include("*.apk")
-	into(providers.systemProperty("user.home").map { home -> File(home, "dist") })
-}
-
-tasks.configureEach {
-    if (name == "assembleRelease") {
-        finalizedBy("copyReleaseApk")
-    }
 }

@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Version 5"
+rootProject.name = "KidQuest"
 include(":app")
  

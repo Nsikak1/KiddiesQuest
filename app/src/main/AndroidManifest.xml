@@ -5,6 +5,16 @@
     <!-- Only used when a grown-up taps "Download" for an extra Bible in Settings. Everything else works offline. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- A short buzz when an answer is right or wrong (can be switched off in Settings). -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Lets the app find the phone's text-to-speech voice (needed on Android 11 and newer). -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +23,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Version5">
+        android:theme="@style/Theme.KidQuest">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|uiMode|density|fontScale|layoutDirection|locale"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Version5"
+            android:theme="@style/Theme.KidQuest"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

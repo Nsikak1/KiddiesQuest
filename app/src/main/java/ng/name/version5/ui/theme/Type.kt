@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import ng.name.version5.R
+import ng.name.nsikak.kidquest.R
 
 /** Lilita One (SIL Open Font License) - a chunky game-style face, bundled so it works offline. */
 val LilitaOne = FontFamily(Font(R.font.lilita_one, FontWeight.Normal))
